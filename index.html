@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tube Dudes</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+	<div id="character" style="font-size: 50px;text-align: center;position: fixed;top: 15%;left: 40%;">你好吗！世界</div>
+	<audio src="mysic/love.aac" loop autoplay></audio>
+  <canvas id="canvas" >
+  
+  	
+  </canvas>
+  
+  
+
+    <script  src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+	<script type="text/javascript">
+         
+    var i=0;
+    setInterval('changeColor()',1000);
+        function changeColor(){
+            var div=document.getElementById('character'); //获得div元素
+            var colorArr=['#8A2BE2','#DEB887','#7FFF00','#008B8B','#FF1493','#ff6600']; //建立颜色库
+            if(i==colorArr.length){ 
+                    i=0;
+                }else{
+                    div.style.color=colorArr[i++%colorArr.length]; //循环颜色
+                }
+            }
+</script>
+
+
+
+</body>
+
+</html>
